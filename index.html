@@ -1,27 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Luca Di Grazia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Luca Di Grazia</title>
+  <script src="./jquery-3.6.0.min.js"></script>
+  <script src="./script.js"></script>
 </head>
+
 <body>
-    <div class="grid-2">
-        <div class="section-1">
-            <i class="fas fa-code fa-5x white"></i>
-            <h2>Luca Di Grazia</h2>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            
+          <nav class="topmenu omega">
+            <h1><span>L</span>uca <span>D</span>i Grazia</h1></nav>
+          </a>
         </div>
-        <div class="section-2">
-            <h2>About</h2>
-            <p>I am Luca Di Grazia.</p>
-          
-        </div>
+         <!--digital clock start-->
+    <div class="datetime">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>
+      </div>
     </div>
+    <!--digital clock end-->
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <div class="container-header">
+              <div class="grid_5" id="social_icons">
+            <li><a href="https://www.linkedin.com/in/luca-di-grazia/" data-after="Linkedin" target="_blank"><img src="./img/Icon/linkedin.png"/></a></li>
+            <li><a href="https://github.com/luca-digrazia" data-after="GitHub" target="_blank"><img src="./img/Icon/github.png"/></a></li>
+            <li><a href="https://scholar.google.com/citations?user=kT6l6S8AAAAJ&hl=en" data-after="Scholar" target="_blank"><img src="./img/Icon/scholar.png"/></a></li>
+          </div>
+          <nav class="topmenu omega">
+            <li><a href="#projects" data-after="#projects">Research</a></li>
+            <li class="nav-item dropdown orange-bg">
+              <a class="nav-link" href="#about">About Me</a>
+            </li>
+          </nav>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <script src="clock.js"></script>
+  <script src="sentences.js"></script>
+  <script src="background.js"></script>
+  <script src="typewriter.js"></script>
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div style="display: flex; justify-content: space-around">
+    <div class="hero container">
+    <div class="typewriter">
+      <h1>I am a Computer Engineer.</h1>
+      <h1>I am a Researcher.</h1>
+      <h1>"Read. Think. Create. Repeat."</h1>
+    </div>
+    </div></div>
+  </section>
+
+  <!-- End Hero Section  -->
+
+  <!-- Projects Section -->
+  <section id="projects" >
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Publications</h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            
+        <a href="https://www.software-lab.org/publications/FSE22TypeAnnotationsStudy.pdf" target="_blank" style="color:white;text-decoration: none;"><h1>The Evolution of Type Annotations in Python: An Empirical Study</h1></a>
+            <h2>FSE'22</h2>
+            <p>We extract 1.4 million type annotation changes
+              from 9,655 repositories. Our results show that type annotations are clearly gaining traction, 
+              yet the large majority of code elements that
+              could be annotated currently remains unannotated. We see a huge
+              potential for techniques that automate the process of adding types
+              into an existing code base, such as neural type prediction models. Finally, many developers seem to not regularly
+              check their code for statically detectable type errors, or if they do,
+              commit the code despite such errors.</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/papers/fse22.png" alt="img">
+          </div>
+        </div></a>
+        <div class="project-item">
+          <div class="project-info">
+            <a href="http://diffsearch.software-lab.org/diffsearch" target="_blank" style="color:white;text-decoration: none;"><h1>DiffSearch: A Scalable and Precise Search Engine for Code Changes</h1></a>
+            <h2>Under submission and second prize winner at ICSE SRC'22</h2>
+            <p>We present a scalable and precise search engine for code
+              changes. Given a query, the approach retrieves within seconds relevant examples from million code changes. Our query
+              language extends the underlying programming language, providing an intuitive
+              way of formulating queries to search for code changes. DiffSearch encodes both queries
+              and code changes into a common feature space, enabling
+              efficient retrieval of candidate search results. Matching these
+              candidates against the query guarantees that every returned
+              search result indeed fits the query.</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/papers/diffsearch.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <a href="https://arxiv.org/abs/2204.02765" target="_blank" style="color:white;text-decoration: none;"><h1>Code Search: A Survey of Techniques for Finding Code</h1></a>
+            <h2>Under Submission</h2>
+            <p>This article provides a comprehensive overview of 30 years of research on code search. Given the
+              huge amounts of existing code, searching for specific code examples is a common activity during
+              software development. We discuss what
+              kinds of queries code search engines support, and give an overview of the main components used
+              to retrieve suitable code examples. In particular, the article discusses techniques to pre-process and
+              expand queries, approaches toward indexing and retrieving code, and ways of pruning and ranking
+              search results.</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/papers/survey.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25993" target="_blank" style="color:white;text-decoration: none;"><h1>A new method for protein characterization and classification using geometrical features for 3D 
+              face analysis</h1></a>
+            <h2>Proteins: Structure, Function, and Bioinformatics</h2>
+            <p> The first part of this study focused on building the protein dataset using a simulation tool and 
+              performing feature extraction using novel geometrical descriptors. The second part involved in a classification of tubulin isotypes and a comparison of tubulin 
+              with the FtsZ protein.</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/papers/protein.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <a href="https://www.mdpi.com/2076-3417/9/11/2218/" target="_blank" style="color:white;text-decoration: none;"><h1>3D Facial Expression Recognition for Defining Users Inner Requirements</h1></a>
+            <h2>Applied Sciences</h2>
+            <p> This study proposes a novel quality function deployment (QFD) design methodology
+              based on customers emotions conveyed by facial expressions. The current advances in pattern
+              recognition related to face recognition techniques have fostered the cross-fertilization and pollination
+              between this context and other fields, such as product design and human-computer interaction.</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/papers/first.png" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Projects Section -->
+
+
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+        <div class="about-img">
+          <img src="img/More/AboutMe.png" alt="img">
+       
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>
+          <br><br>
+          I graduated in <b>Computer Engineering</b> at <a href="https://www.polito.it/index.php?lang=en" target="_blank">Politecnico di Torino</a> in 2019. Now, I am a <b>PhD student</b> at <a href="https://www.uni-stuttgart.de/en/" target="_blank">Stuttgart Universit&auml;t</a>, part of TU9 (the alliance of leading Technical Universities in Germany), advised by <a href="https://www.software-lab.org/people/Michael_Pradel.html" target="_blank">Prof. Dr. Michael Pradel</a>. My current <b>research interests</b> are on code evolution, code search, software analysis, and machine learning.
+          <br><br>
+          Moreover, I love <b>multicultural environments</b> and <b>challenging projects</b> that are my daily bread. I am a hard-worker with an <b>amazing curiosity</b> and an <b>incredible adaptability</b>. Therefore, I really love contributing to research communities using my <b>software engineering</b> skills to solve <b>difficult problems</b>. Finally,  I believe in the importance of <b>scientific research</b> and in investing in <b>talented workers</b> that should be golden rules for all companies and governments.
+          
+        </h2>
+        <a href="mailto:luca.di-grazia@iste.uni-stuttgart.de" class="cta">Email</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <script src="./app.js"></script>
+
+  <p style="text-align: center"><a href="imprint.md">Imprint</a> &copy;<script>document.write(new Date().getFullYear())</script> <a href="LICENSE.md">MIT License.</a></p>
 </body>
+
 </html>
