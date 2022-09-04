@@ -180,7 +180,7 @@ p {
 	, 0.5);
 }
 .container-header{
-    line-height: 3.22;
+    line-height: 2.52;
 }
 #social_icons {
     padding: .5em;
@@ -189,7 +189,7 @@ p {
 
 .topmenu li {
      display:inline-block;
-     font-size: 1.5em;
+     font-size: 1.2em;
      text-align: right;
 }
 .topmenu.omega{
