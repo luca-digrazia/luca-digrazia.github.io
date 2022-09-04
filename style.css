@@ -289,16 +289,12 @@ p {
 #hero h1 {
 	color: #fff;
   font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
 }
 
-
-
 #hero h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
+	color: rgb(255, 221, 0
+	);
 }
 
 
@@ -964,7 +960,7 @@ p {
 	  
 	  .orange-bg {
 		background-color: rgb(255, 221, 0, 0.5);
-		border-radius: 100px;
+		border-radius: 30px;
 	  }
 
 	  #alpha {
