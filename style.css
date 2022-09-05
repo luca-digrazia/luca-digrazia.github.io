@@ -167,7 +167,7 @@ p {
 	transform: translate(-50%, -50%) scale(0);
 	color: rgba(240, 248, 255, 0.021);
 	font-size: 13rem;
-	letter-spacing: 50px;
+	letter-spacing: 40px;
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
 }
@@ -180,11 +180,11 @@ p {
 	, 0.5);
 }
 .container-header{
-    line-height: 2.52;
+	line-height: 1.52;
+	padding-top: 15px;
 }
 #social_icons {
-    padding: .5em;
-    display: inline-block;
+    display: inline;
 }
 
 .topmenu li {
@@ -283,7 +283,7 @@ p {
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 0 450px;
-	padding-bottom: 220px;
+	padding-bottom: 300px;
 	justify-content: flex-start;
 }
 #hero h1 {
