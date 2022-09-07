@@ -41,6 +41,10 @@ body {
 	50% { border-color: transparent; }
   }
 
+  #typed-strings{
+	display: none;
+}
+
 a {
 	text-decoration: none;
 }
