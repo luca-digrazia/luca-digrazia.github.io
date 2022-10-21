@@ -516,6 +516,11 @@ p {
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
+
+#projects h2 span {
+	color: rgb(255, 221, 0
+	);
+}
 /* End Projects section */
 
 /* About Section */
