@@ -529,7 +529,7 @@ p {
 	text-align: right;
 	margin: 0 auto;
 	max-width: 1270px;
-	padding: 20px 20px;
+	padding: 0px 0px;
 }
 #about .col-left {
 	width: 250px;
@@ -537,7 +537,7 @@ p {
 	
 }
 #about .col-right {
-	width: 150%;
+	width: 140%;
 	margin-top: 40px;
 }
 #about .col-right h2 {
@@ -554,12 +554,12 @@ p {
 #about .col-right .cta {
 	color: black;
 	margin-bottom: 50px;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	font-size: 2rem;
 }
 
 #about .col-right2 {
-	width: 100%;
+	width: 70%;
 	text-align: right;
 }
 #about .col-right2 h2 {
