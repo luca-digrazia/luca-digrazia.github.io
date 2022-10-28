@@ -537,7 +537,7 @@ p {
 	
 }
 #about .col-right {
-	width: 140%;
+	width: 120%;
 	margin-top: 40px;
 }
 #about .col-right h2 {
@@ -546,6 +546,8 @@ p {
 	font-weight: 300;
 	letter-spacing: 0.2rem;
 	margin-bottom: 0px;
+	text-align: justify;
+    text-justify: inter-word;
 	
 }
 #about .col-right p {
@@ -561,6 +563,7 @@ p {
 #about .col-right2 {
 	width: 70%;
 	text-align: right;
+	padding-left: 100px;
 }
 #about .col-right2 h2 {
 	font-size: 1.8rem;
