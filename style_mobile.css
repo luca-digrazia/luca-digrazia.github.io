@@ -769,16 +769,10 @@ p {
   }
 
 /* Media Query For Tablet */
-@media only screen and (max-width:768px) {
-	.wrapper {
-	  padding: 15px;
-	}
-	.content{
-	  width: auto;
-	}
+@media only screen and (max-width: 768px) {
 	.cta {
 		font-size: 2.5rem;
-		padding: 0px 0px;
+		padding: 20px 60px;
 	}
 	h1.section-title {
 		font-size: 6rem;
@@ -786,10 +780,7 @@ p {
 
 	/* Hero */
 	#hero h1 {
-		font-size: 10vw;
-		margin: 0 auto;
-	justify-content: flex-start;
-	text-align: left;
+		font-size: 3.5vw;
 	}
 	/* End Hero */
 
@@ -809,7 +800,7 @@ p {
 	}
 	#projects .project-item {
 		height: 400px;
-		margin: 0;
+		margin-left: 10px;
 		width: 100%;
 		border-radius: 0;
 	}
@@ -824,9 +815,10 @@ p {
 	/* About */
 	#about .about {
 		flex-direction: row;
+		margin-left: 10px;
 	}
 	#about .col-left {
-		width: 600px;
+		width: 400px;
 		height: 400px;
 		padding-left: 60px;
 	}
