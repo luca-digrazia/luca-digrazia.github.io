@@ -815,6 +815,7 @@ p {
 	/* About */
 	#about .about {
 		flex-direction: row;
+		margin-left: 10px;
 	}
 	#about .col-left {
 		width: 600px;
