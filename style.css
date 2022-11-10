@@ -768,6 +768,159 @@ p {
 	letter-spacing: 1px;
   }
 
+  /* Media Query For Mobile */
+@media only screen and (max-width: 767px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 3.5vw;
+	}
+	/* End Hero */
+
+	/* Services Section */
+	#services .service-bottom .service-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End Services Section */
+
+	/* Project */
+	#projects .project-item {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info {
+		height: 100%;
+	}
+	#projects .all-projects .project-img {
+		height: 100%;
+	}
+	/* End Project */
+
+	/* About */
+	#about .about {
+		flex-direction: row;
+		margin-left: 10px;
+	}
+	#about .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#about .about .col-left .about-img::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px solid rgb(255, 221, 0
+		);
+	}
+	#about .col-right {
+		text-align: left;
+		padding: 30px;
+	}
+	#about .col-right h1 {
+		text-align: left;
+	}
+	/* End About */
+
+	/* contact  */
+	#contact .contact {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#contact .contact-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#contact .contact-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#contact .contact-item .icon {
+		height: 100px;
+		width: 100px;
+	}
+	#contact .contact-item .icon img {
+		object-fit: contain;
+	}
+	#contact .contact-item .contact-info {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+	}
+	/* End contact  */
+	.datetime{
+		color: #fff;
+		background: rgb(255, 221, 0, 0.0);
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		width: 440px;
+		padding: 15px 10px;
+		min-width:140px;
+		border: 3px solid rgb(255, 221, 0, 0.0);
+		border-radius: 5px;
+		-webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+		transition: 0.2s;
+		transition-property: background, box-shadow;
+	  }
+
+	  
+	  .datetime:hover{
+		background: rgb(255, 221, 0
+		, 0.5);
+		box-shadow: 0 0 30px rgb(255, 221, 0
+		, 0.5);
+	  }
+	  
+	  .date{
+		font-size: 20px;
+		font-weight: 600;
+		text-align: center;
+		letter-spacing: 3px;
+	  }
+	  
+	  .time{
+		font-size: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 6px;
+		font-weight: 600;
+		letter-spacing: 1px;
+	  }
+	  
+	  .time span:not(:last-child){
+		position: relative;
+		margin: 0 6px;
+		font-weight: 600;
+		text-align: center;
+		letter-spacing: 1px;
+	  }
+}
+/* End Media Query For Mobile */
+
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
 	.cta {
