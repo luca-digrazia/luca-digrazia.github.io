@@ -547,8 +547,8 @@ p {
 }
 
 #about .col-right2 {
-	width: 70%;
-	text-align: right;
+	width: 50%;
+	text-align: justify;
 	padding-left: 100px;
 }
 #about .col-right2 h2 {
