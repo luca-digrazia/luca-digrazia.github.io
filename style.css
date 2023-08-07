@@ -90,10 +90,11 @@ p {
 	background-color: transparent;
 	border: 2px solid rgb(255, 221, 0
 	);
-	font-size: 2rem;
+	font-size: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
 	margin-top: 30px;
+	left:50%;
 	transition: 0.2s ease;
 	transition-property: background-color, color;
 }
