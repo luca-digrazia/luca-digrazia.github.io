@@ -1084,7 +1084,7 @@ p {
   .timeline li{
 	list-style: none;
 	float: left;
-	width: 33%;
+	width: 25%;
 	position: relative;
 	text-align: center;
 	font-size: 11px;
