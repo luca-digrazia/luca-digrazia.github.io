@@ -912,7 +912,7 @@ p {
 /* Media Query For Mobile */
 @media only screen and (max-width: 767px) {
 #typewriter {
-		background-image: url(./img/Background/background002_mobile.jpeg);
+		background-image: url(./img/Background/background002_mobile.png);
 		background-size: cover;
 		background-position: top center;
 		position: relative;
@@ -922,7 +922,7 @@ p {
 	
 	/* Hero Section */
 #hero {
-		background-image: url(./img/Background/background002_mobile.jpeg);
+		background-image: url(./img/Background/background002_mobile.png);
 		background-size: cover;
 		background-position: top center;
 		position: relative;
