@@ -161,6 +161,7 @@ p {
 	letter-spacing: 0.2rem;
 	text-decoration: none;
 	color: white;
+	background-color: rgba(240, 248, 255, 0.021) ;
 	text-transform: uppercase;
 	padding: 8px;
 	display: block;
@@ -258,7 +259,7 @@ p {
 }
 /* End Header section */
 #typewriter {
-	background-image: url(./img/Background/background002.jpeg);
+	background-image: url(./img/Background/wordcloud_luca.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -268,7 +269,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/Background/background002.jpeg);
+	background-image: url(./img/Background/wordcloud_luca.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
