@@ -124,7 +124,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+	background-color: rgba(31, 30, 30, 0.4);
 	transition: 0.2s ease background-color;
 }
 #header .nav-bar {
@@ -1062,7 +1062,7 @@ p {
 	  }
 	  
 	  .orange-bg {
-		background-color: rgb(255, 221, 0, 0.5);
+		background-color: rgb(255, 221, 0, 0.6);
 		border-radius: 30px;
 	  }
 
