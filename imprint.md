@@ -5,10 +5,9 @@
 ###Operator and contact:
 
 Luca Di Grazia
-Institute for Software Technology
-Universitätsstr. 38
-70569 Stuttgart
-Email: luca.di-grazia@iste.uni-stuttgart.de
+Università della Svizzera Italiana
+Via la Santa 1, 6962 Lugano-Viganello
+Email: work@lucadigrazia.com
 
 ###Responsible for content according to § 55 II RStV
 Luca Di Grazia
