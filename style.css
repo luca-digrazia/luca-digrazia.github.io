@@ -79,8 +79,8 @@ p {
 	text-align: center;
 }
 .section-title span {
-	color: rgb(57, 255, 20
-	);
+	color: rgb(70, 130, 255);
+
 }
 
 .cta {
@@ -88,8 +88,8 @@ p {
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid rgb(57, 255, 20
-	);
+	border: 2px solid rgb(70, 130, 255);
+
 	font-size: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -109,8 +109,7 @@ p {
 
 }
 .brand h1 span {
-	color: rgb(57, 255, 20
-	);
+	color: rgb(70, 130, 255);
 }
 
 /* Header section */
@@ -506,8 +505,7 @@ p {
 
 
 #projects h2 span {
-	color: rgb(57, 255, 20
-	);
+	color: rgb(70, 130, 255);
 }
 /* End Projects section */
 
@@ -1062,12 +1060,12 @@ p {
 	  }
 	  
 	  .orange-bg {
-		background-color: rgb(57, 255, 20, 0.7);
+		background-color: rgb(70, 130, 255);
 		border-radius: 30px;
 	  }
 
 	  #alpha {
-		background-color: rgb(57, 255, 20, 0.7);
+		background-color: rgb(70, 130, 255);
 		opacity: 0.8;
 		filter: alpha(opacity=80);
 	   }
