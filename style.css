@@ -84,24 +84,27 @@ p {
 }
 
 .cta {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid rgb(70, 130, 255);
+    display: inline-block;
+    padding: 5px 15px; /* Reduced padding for better fit */
+    color: rgb(70, 130, 255); /* Matches the border color for consistency */
+    background-color: transparent;
+    border: 2px solid rgb(70, 130, 255);
+    border-radius: 5px; /* Adds a subtle rounded corner */
+    font-size: 0.9rem; /* Adjusted size for better readability */
+    text-transform: none; /* Keeps the text in its original case for email readability */
+    letter-spacing: 0.05rem; /* Slightly reduced spacing for better text fit */
+    margin: 10px 10px 0 0; /* Adds some spacing between elements */
+    text-decoration: none; /* Removes underline for cleaner appearance */
+    transition: 0.3s ease;
+    transition-property: background-color, color, transform;
+}
 
-	font-size: 1rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	margin-top: 30px;
-	left:50%;
-	transition: 0.2s ease;
-	transition-property: background-color, color;
-}
 .cta:hover {
-	color: white;
-	background-color: rgb(255, 221, 0, 0.5);
+    color: white; /* Changes text color on hover */
+    background-color: rgb(70, 130, 255); /* Fills the background on hover */
+    transform: scale(1.05); /* Adds a slight scaling effect */
 }
+
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
