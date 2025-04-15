@@ -1,0 +1,71 @@
+Dr. Luca Di Grazia
+
+	•	About Me
+	•	Publications
+	•	CV
+	•	
+	•	
+	•	
+	•	
+	•	
+	•	
+	•	  
+
+About me
+	•	Bachelor’s and Master’s Degree in Computer Engineering
+	•	Research Internship in Generative AI
+	•	Ph.D. Degree in Computer Science
+	•	Postdoc in Software Engineering
+	•	
+	•	
+Bio:  Dr. Luca Di Grazia is a Postdoctoral Researcher at the Università della Svizzera Italiana (USI) in Switzerland, working with Prof. Mauro Pezzè. He earned his Ph.D. (summa cum laude) from Stuttgart Universität in Germany under Prof. Michael Pradel with the thesis "Supporting Software Evolution via Search and Prediction". His research focuses on Generative AI for software testing, deep learning for automated bug fixing, and software evolution, earning him multiple awards, including the ACM SIGSOFT Distinguished Paper in Singapore and the GenAI Uber competition in Amsterdam. He has published widely in top-tier venues and supervised different student projects, contributing significantly to the field of GenAI for programming.   Major Achievements:
+	•	Until now: Innovative research in Software Engineering and Generative AI at a prestigious university (Top-20 in CSRankings for Software Engineering) and a tech giant (Market Cap > $100B) across multiple countries.
+	•	2024: Successfully defended his PhD with Summa cum laude (the highest grade in the German system).
+	•	2023: Won GenAI Uber competition with his internship project on using generative AI for fixing bugs to boost developer productivity, beating 103 teams, and presenting as winners to the Uber's CEO and ELT.
+	•	2022: Won the ACM SIGSOFT Distinguished Paper Award at ESEC/FSE.
+	•	2022: Second prize at ACM Student Research Competition at ICSE 2022: Efficiently and Precisely Searching for Code Changes with DiffSearch ($300).
+	•	2020: Gnome Challenge 2020 winner (1st phase) to Reach a new generation of open-source coders ($1,000).
+	•	2016-2018: Awarded national scholarship to study computer engineering at Polytechnic of Turin (€3,000/year).
+ Research Interests:  Deep Learning to automatically fix bugs (ICSE 2024), Generative AI (Uber research internship), Software Evolution and Mining Repositories (ESEC/FSE 2022, Distinguished Paper Award), Code Change Retrieval (IEEE TSE paper, ICSE 2022 SRC 2nd winner), Code Search (ACM CSUR paper), and more. Additionally, He has supervised a total of seven students, including projects on "Towards Automatically Repairing Errors in Python", "Testing FAISS indexing on DiffSearch", on "Improving the Recall of Searching for Code Changes", and more.
+
+Contact: Campus Est, Sector D, Via la Santa 1, 6962 Lugano, Switzerland. 
+Institutional: luca.di.grazia@usi.ch Private: work@lucadigrazia.com 
+Extra Info: 
+References are available on request. All opinions expressed in this website are his own and not of his employer. No information is gathered from you by this website.
+Latest News
+01/2025: Invited to serve as a co-chair for the Tool Demonstration Track of Internetware 2025.
+12/2024: Invited to serve as a reviewer for the International Conference of Software Engineering (ICSE 2026).
+07/2024: Our paper about: “Devs in 2030” received significant media attention on The Register and Swiss IT Magazine .
+04/2024: Attended a fantastic Dagstuhl Seminar on Code Search!
+02/2024: Successfully defended my PhD (summa cum laude) and starting a new position at USI advised by Prof. Mauro Pezzè in Switzerland.
+12/2023: ICSE 2024! Our paper: “PyTy: Repairing Static Type Errors in Python” has been accepted for the ICSE 2024 conference in Portugal.
+06/2023: Won a Uber competition on Generative AI for developer productivity among 103 teams worldwide.
+05/2023: Generative AI at Uber! I am joining Uber for a research internship in Amsterdam.
+03/2023: I was invited by JetBrains in their Munich office to discuss our paper “DiffSearch: A Scalable and Precise Search Engine for Code Changes”.
+12/2022: Distinguished Paper Award! Our paper “The Evolution of Type Annotations in Python: An Empirical Study” received an ACM SIGSOFT Distinguished Paper Award at ESEC/FSE 2022 in Singapore.
+11/2022: IEEE TSE! Our paper: “DiffSearch: A Scalable and Precise Search Engine for Code Changes” has been accepted for the IEEE Transactions on Software Engineering journal.
+10/2022: ACM CSUR! Our paper: “Code Search: A Survey of Techniques for Finding Code” has been accepted for the ACM Computing Surveys journal.
+09/2022: ESEC/FSE! Our paper: “The Evolution of Type Annotations in Python: An Empirical Study” has been accepted for the ESEC/FSE 2022 conference.
+05/2022: ICSE SRC 2022! Winner of the second prize ($300) for the ICSE ACM Student Research Competition (SRC).
+Selected Peer-reviewed Publications
+PyTy: Repairing Static Type Errors in Python
+ICSE 2024
+PyTy is a novel automated technique aimed at fixing type errors in Python. It was developed based on a study and employs a dataset named PyTyDefects, containing over 2,700 Python type errors fixes. The paper highlights the use of cross-lingual transfer learning to enhance PyTy's effectiveness, even with a small dataset. This involves adapting an existing program repair model for PyTy's use. PyTy proved highly effective, successfully resolving 85.4% of type errors in the evaluation. Additionally, its real-world applicability is shown by the high acceptance rate of GitHub pull requests using PyTy's fixes.
+
+The Fault in Our Stars: Designing Reproducible Large-scale Code Analysis Experiments
+ECOOP 2024
+Large-scale software repositories offer insights into software development but pose scaling challenges. This paper proposes a standardized methodology for sampling and studying repositories, emphasizing clear population definitions, reproducibility, and avoiding unreliable metrics like project popularity.
+
+Code Search: A Survey of Techniques for Finding Code
+ACM Computing Surveys (CSUR), 2023
+This article provides a comprehensive overview of 30 years of research on code search. Given the huge amounts of existing code, searching for specific code examples is a common activity during software development. We discuss what kinds of queries code search engines support, and give an overview of the main components used to retrieve suitable code examples. In particular, the article discusses techniques to pre-process and expand queries, approaches toward indexing and retrieving code, and ways of pruning and ranking search results.
+
+The Evolution of Type Annotations in Python: An Empirical Study
+ESEC/FSE 2022 ACM SIGSOFT Distinguished Paper Award
+We extract 1.4 million type annotation changes from 9,655 Python repositories. Our results show that type annotations are clearly gaining traction, yet the large majority of code elements that could be annotated currently remains unannotated. We see a huge potential for techniques that automate the process of adding types into an existing code base, such as neural type prediction models. Finally, many developers seem to not regularly check their code for statically detectable type errors, or if they do, commit the code despite such errors.
+
+DiffSearch: A Scalable and Precise Search Engine for Code Changes
+IEEE Transactions on Software Engineering (TSE), 2022 2nd prize winner at ICSE Student Research Competition 2022 and Journal-first track at ASE 2023
+We present a scalable and precise search engine for code changes. Given a query, the approach retrieves within seconds relevant examples from million code changes. Our query language extends the underlying programming language, providing an intuitive way of formulating queries to search for code changes. DiffSearch guarantees that every returned search result fits the query.
+
+Imprint © MIT License.
