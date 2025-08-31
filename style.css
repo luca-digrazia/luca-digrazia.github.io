@@ -261,7 +261,7 @@ p {
 }
 /* End Header section */
 #typewriter {
-	background-image: url(./img/Background/wordcloud_luca.png);
+	background-image: url(./img/Background/luca.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -271,7 +271,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/Background/wordcloud_luca.png);
+	background-image: url(./img/Background/luca.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -1086,7 +1086,7 @@ p {
   .timeline li{
 	list-style: none;
 	float: left;
-	width: 25%;
+	width: 33%;
 	position: relative;
 	text-align: center;
 	font-size: 10px;
