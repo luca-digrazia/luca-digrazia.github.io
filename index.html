@@ -7,307 +7,380 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="./img/More/AboutMe.png">
   <title>Dr. Luca Di Grazia</title>
-  <meta name="description" content="Great Minds Fellow at University of St. Gallen in Switzerland. Previously, PhD supervised by Prof. Michael Pradel.">
+  <meta name="description" content="Great Minds Fellow at University of St. Gallen in Switzerland. Researcher in AI, Software Engineering, and Security. Previously PhD at University of Stuttgart.">
+  <meta property="og:title" content="Dr. Luca Di Grazia">
+  <meta property="og:description" content="Great Minds Fellow at University of St. Gallen. Researcher in AI, Software Engineering, and Security.">
   <meta property="og:image" content="./img/More/AboutMe.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="./jquery-3.6.0.min.js"></script>
-  <script src="./script.js"></script>
 </head>
 
 <body>
   <!-- Header -->
-  <section id="header">
+  <header id="header">
     <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero"> 
-          <nav class="topmenu omega">
-            <h1><span>Dr.</span> Luca Di Grazia</h1></nav>
-          </a>
-        </div>
-
+      <nav class="nav-bar">
+        <a href="#hero" class="brand">
+          <span class="brand-dr">Dr.</span> Luca Di Grazia
+        </a>
         <div class="nav-list">
           <div class="hamburger">
             <div class="bar"></div>
           </div>
           <ul>
-            <div class="container-header">
-              <nav class="topmenu omega">
-                <li class="nav-item dropdown orange-bg">
-                  <a class="nav-link" href="#about">About Me</a></li>      
-                <li><a href="#projects" data-after="#projects">Publications</a></li>
-                <li><a href="./papers/DiGraziaLuca_CV.pdf" data-after="./papers/DiGraziaLuca_CV.pdf" target="_blank">CV</a></li>
-                
-              <div class="topmenu omega" id="social_icons">
-                <li><a href="#contact" data-after="#contact"><img src="./img/Icon/email.jpeg"/></a></li>
-                <li><a href="https://www.linkedin.com/in/luca-di-grazia/" data-after="Linkedin" target="_blank"><img src="./img/Icon/linkedin.png"/></a></li>
-            <li><a href="https://github.com/luca-digrazia" data-after="GitHub" target="_blank"><img src="./img/Icon/github.png"/></a></li>
-            <li><a href="https://scholar.google.com/citations?user=kT6l6S8AAAAJ&hl=en&oi=ao" data-after="Scholar" target="_blank"><img src="./img/Icon/scholar.png"/></a></li>
-            <li><a href="https://orcid.org/0000-0002-5306-8645" data-after="ORCID" target="_blank"><img src="./img/Icon/orcid.png"/></a></li>
-            <li><a href="https://dblp.org/pid/318/0995.html" data-after="DBLP" target="_blank"><img src="./img/Icon/dblp.png"/></a></li>
-          </div>
-          </nav>
+            <li><a href="#about">About</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./papers/DiGraziaLuca_CV.pdf" target="_blank">CV</a></li>
           </ul>
         </div>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Dr. Luca<br>Di Grazia</h1>
+        <p class="hero-tagline">Scientist &middot; Innovator &middot; Engineer</p>
+        <p class="hero-description">Great Minds Fellow at the University of St. Gallen, working at the intersection of Artificial Intelligence, Software Security, and Technology Innovation.</p>
+        <div class="hero-cta">
+          <a href="#about" class="btn btn-primary">Learn More</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-social">
+        <a href="https://www.linkedin.com/in/luca-di-grazia/" target="_blank" aria-label="LinkedIn">
+          <img src="./img/Icon/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/luca-digrazia" target="_blank" aria-label="GitHub">
+          <img src="./img/Icon/github.png" alt="GitHub">
+        </a>
+        <a href="https://scholar.google.com/citations?user=kT6l6S8AAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar">
+          <img src="./img/Icon/scholar.png" alt="Google Scholar">
+        </a>
+        <a href="https://orcid.org/0000-0002-5306-8645" target="_blank" aria-label="ORCID">
+          <img src="./img/Icon/orcid.png" alt="ORCID">
+        </a>
+        <a href="https://dblp.org/pid/318/0995.html" target="_blank" aria-label="DBLP">
+          <img src="./img/Icon/dblp.png" alt="DBLP">
+        </a>
       </div>
     </div>
   </section>
-  <!-- End Header -->
-
-  <script src="typewrite.js"></script>
-
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div style="display: flex; justify-content: space-around">
-    <div class="hero container">
-      
-    </div></div>
-  </section>
-  <!-- End Hero Section  -->
+  <!-- End Hero Section -->
 
   <!-- About Section -->
   <section id="about">
-    
-    <div class="about container">
-      
-
-      <div class="col-right">
-        <h1 class="section-title" style="text-align: center;">About <span>me</span></h1>
-       
-        <ul class="timeline">
-          <li style="--bg-image: url('./img/Icon/polito.webp'); --top-text: '10/2013 - 07/2019 Turin ' url('./img/Icon/italy.png')">Bachelor’s and Master’s Degree<br> in Computer Engineering</li>
-          <li style="--bg-image: url('./img/Icon/uber.png'); --top-text: '05/2023 - 09/2023 Amsterdam ' url('./img/Icon/nl.png')">Research Internship<br>in Generative AI</li>
-          <li style="--bg-image: url('./img/Icon/unistuttgart.png'); --top-text: '09/2019 - 02/2024 Stuttgart ' url('./img/Icon/germany.png')">Ph.D. Degree<br>in Computer Science</li>
-          
-          
-        </ul>
-        <br><br>
-        <ul class="timeline">
-          
-          <li style="--bg-image: url('./img/Icon/usi.png'); --top-text: '02/2024 - 08/2025 Lugano ' url('./img/Icon/swiss.png')">Postdoc<br>in Software Testing</li>
-          <li style="--bg-image: url('./img/Icon/hsg3.png'); --top-text: '08/2025 - Now Saint Gallen ' url('./img/Icon/swiss.png')">Great Minds Fellowship<br>in Software Security</li>
-          <br><br>
-          
-        </ul>
-
-        <h2>
-
-          <u>Short Bio</u>:    
-         <br>Luca Di Grazia holds a <strong>Great Minds Fellowship at the University of St. Gallen</strong> in Switzerland on security of AI-generated code, hosted by Prof. Dr. Guido Salvaneschi. Previously, he was a <strong>Postdoctoral Researcher at USI Lugano</strong>, focusing on GenAI for software testing and software veryfication. In this role, he supervised PhD students and designed real-world testing scenarios in the group of Prof. Dr. Mauro Pezzè.  
-          He earned his <strong>Ph.D. in Computer Science (summa cum laude) from the University of Stuttgart</strong>, under the supervision of Prof. Dr. Michael Pradel. His dissertation, <em>"Supporting Software Evolution through Search and Predictions"</em>, explored innovative approaches to software maintenance and development.  
-          During a <strong>Research Internship at Uber in Amsterdam</strong>, he developed a GenAI-based bug-fixing approach for Java linter errors. His project won an internal Uber competition against 103 teams, and the team presented the results directly to the Uber CEO.  
-        <br><br>
-
-        <u>Three Major Achievements</u>:      
-<ul>
-    <li><strong>2025:</strong> Great Minds Fellowship funded by the University of St. Gallen with 189,747 CHF (∼$230,000) for the research project "Secure Software in the Age of Massively GenAI-Generated Code". Principal investigator.</li>
-    <li><strong>2023:</strong> Won <a href="https://www.uber.com/en-DE/blog/the-transformative-power-of-generative-ai/?uclick_id=c4c5891a-42be-49cc-a9e1-7722ffb268b8" target="_blank">GenAI Uber competition</a> with his internship project on using generative AI for fixing bugs to boost developer productivity, beating 103 teams, and presenting as winners to the Uber's CEO and ELT.</li>
-    <li><strong>2022:</strong> Won the <a href="https://www.f05.uni-stuttgart.de/en/faculty/news/news/Software-Lab-earns-ACM-SIGSOFT-Distinguished-Paper-Awards/" target="_blank">ACM SIGSOFT Distinguished Paper Award</a> at ESEC/FSE.</li>
-       
-</ul>
-
-<br>
-        
-          
-      
-      
-
-<u>Research Interests</u>:  
-<br>Generative AI to automatically generate test oracles (<b>ASE 2025</b>), fix Python type annotations (<b>ICSE</b> 2024), Java liter errors (Uber research internship), Software Evolution and Mining Repositories (<b>ESEC/FSE</b> 2022, Distinguished Paper Award), Code Change
-          Retrieval (<b>IEEE TSE</b> paper, ICSE 2022 SRC 2nd winner), Code Search (<b>ACM CSUR</b> paper), and more. Additionally, 
-          He has supervised a total of seven students, including projects on "Towards Automatically Repairing Errors in Python", 
-           "Testing FAISS indexing on DiffSearch", on "Improving the Recall of Searching for Code Changes", and more.
-            
-        
-          <div id="contact">
-          <br><u>Contact</u>: Torstrasse 25, 9000 St. Gallen, Switzerland. <br>
-        <a href="mailto:luca.digrazia@unisg.ch" class="cta">
-            Institutional: luca.digrazia@unisg.ch
-        </a>     
-        <a href="mailto:work@lucadigrazia.com" class="cta">
-          Private: work@lucadigrazia.com
-      </a>
-      <br><u>Extra Info</u>:  
-      <br>References are available on request. All opinions expressed in this website are his own and not of his employer. No information is gathered from you by this website.
-    </div>  
-    </h2>   
-
-      </div>
-      <div class="col-right2">
-        <h2 class="section-title">Latest News</h2>
-        <p>01/2026: Invited to serve as junior editor for the prestigiuos IEEE Transactions on Software Engineering (TSE) journal. </p> 
-        <p>11/2025: ICSE 2026! Our paper: "E-Test: E'er-Improving Test Suites” has been accepted at ICSE 2026 in Brazil. </p> 
-        <p>10/2025: I presented our <a href="https://www.lucadigrazia.com/papers/ase2025.pdf" target="_blank">ASE 2025 paper</a> at University College London, invited by <a href="https://profiles.ucl.ac.uk/38657-federica-sarro" target="_blank">Prof. Federica Sarro</a>.</p>
-        <p>10/2025: I taught a course (1 ECTS) on <a href="https://www.digital-finance-msca.com/event-details-registration/explainable-ai-training-week" target="_blank">AI for Data Analysis</a> at Bern University of Applied Sciences. </p>
-        <p>08/2025: Starting a Great Minds Fellowship (∼$230,000) at University of St. Gallen in Switzerland, hosted by Prof. Dr. Guido Salvaneschi.</p>
-        <p>08/2025: ASE 2025! Our paper: "Do LLMs Generate Useful Concrete Test Oracles? An Empirical Study with an Unbiased Dataset” has been accepted at ASE 2025 in South Korea. </p>  
-        <p>06/2025: <a href="https://ketaiq.github.io/" target="_blank">Ketai Qiu</a> (PhD I co-supervise) won the ACM Student Research Competition at FSE 2025!</p>
-        <p>01/2025: Invited to serve as a co-chair for the <a href="https://conf.researchr.org/track/internetware-2025/internetware-2025-tool-demonstration-track" target="_blank">Tool Demonstration Track of Internetware 2025</a>. </p>
-        <p>12/2024: Invited to serve as a reviewer for the International Conference of Software Engineering (<a href="https://conf.researchr.org/track/icse-2026/icse-2026-research-track" target="_blank">ICSE 2026</a>). </p>
-        <p>07/2024: Our paper about: <a href="https://arxiv.org/abs/2405.12731" target="_blank">“Devs in 2030”</a> received significant media attention on <a href="https://www.theregister.com/2024/05/28/software_development_2030/" target="_blank">The Register</a> and <a href="https://www.itmagazine.ch/artikel/82288/KI-Assistent_der_Zukunft_koennte_Programmier-Output_verdoppeln.html" target="_blank">Swiss IT Magazine</a> .
-        <p>04/2024: Attended a fantastic <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/24172" target="_blank">Dagstuhl Seminar on Code Search</a>!</p>   
-        <p>02/2024: Successfully  <a href="./img/More/phdcertificate.png" target="_blank">defended my PhD</a>  (summa cum laude) and starting a new position at USI advised by Prof. Mauro Pezzè in Switzerland.</p>   
-        
-        <p>12/2023: ICSE 2024!
-          Our paper: “PyTy: Repairing Static Type Errors in Python” has been accepted for the ICSE 2024 conference in Portugal. </p>  
-          <p>06/2023: Won a <a href="https://www.uber.com/en-DE/blog/the-transformative-power-of-generative-ai/?uclick_id=c4c5891a-42be-49cc-a9e1-7722ffb268b8" target="_blank">Uber competition</a>  on Generative AI for developer productivity among 103 teams worldwide.</p>
-        <p>05/2023: Generative AI at Uber! I am  <a href="./img/More/lucauber.jpeg" target="_blank">joining Uber</a> for a research internship in Amsterdam.</p>   
-         
-        <p>03/2023: I was invited by JetBrains in their Munich office to discuss our paper <a href="https://www.lucadigrazia.com/papers/ieeetse2022.pdf" target="_blank">“DiffSearch: A Scalable and Precise Search Engine for Code Changes”</a>. </p>   
-         
-        <p>12/2022: <a href="https://www.f05.uni-stuttgart.de/en/faculty/news/news/Software-Lab-earns-ACM-SIGSOFT-Distinguished-Paper-Awards/" target="_blank">Distinguished Paper Award</a>! 
-          Our paper “The Evolution of Type Annotations in Python: An Empirical Study” received 
-          an ACM SIGSOFT Distinguished Paper Award at ESEC/FSE 2022 in Singapore.  </p>    <!--  
-  
-        <p>11/2022: IEEE TSE! Our paper: <a href="https://www.lucadigrazia.com/papers/ieeetse2022.pdf" target="_blank">“DiffSearch: A Scalable and Precise Search Engine for Code Changes”</a> 
-          has been accepted for the IEEE Transactions on Software Engineering journal. </p>
-        <p>10/2022: ACM CSUR! Our paper: <a href="https://www.lucadigrazia.com/papers/acmcsur2022.pdf" target="_blank">“Code Search: A Survey of Techniques for Finding Code”</a>
-          has been accepted for the ACM Computing Surveys journal. </p>    
-        <p>09/2022: ESEC/FSE!
-            Our paper: <a href="https://www.lucadigrazia.com/papers/fse22.pdf" target="_blank">“The Evolution of Type Annotations in Python: An Empirical Study”</a>
-             has been accepted for the ESEC/FSE 2022 conference. </p>    
-        <p>05/2022: ICSE SRC 2022!
-          <a href="./img/Awards/SRC22.jpg" target="_blank">Winner of the second prize</a> ($300) for the ICSE ACM Student Research Competition (SRC). </p>    -->
+    <div class="section-container">
+      <h2 class="section-title"><span>About</span> Me</h2>
+      <div class="about-grid">
+        <div class="about-bio">
+          <p class="about-lead">A computer scientist with a passion for building technology that matters &mdash; bridging cutting-edge research with real-world impact.</p>
+          <p>Luca Di Grazia holds a <strong>Great Minds Fellowship at the University of St. Gallen</strong> in Switzerland, focusing on the security of AI-generated code, hosted by Prof. Dr. Guido Salvaneschi. Previously, he was a <strong>Postdoctoral Researcher at USI Lugano</strong>, working on GenAI for software testing and verification under Prof. Dr. Mauro Pezz&egrave;.</p>
+          <p>He earned his <strong>Ph.D. in Computer Science (summa cum laude) from the University of Stuttgart</strong>, supervised by Prof. Dr. Michael Pradel. His dissertation explored innovative approaches to software maintenance through search and predictions.</p>
+          <p>During a <strong>Research Internship at Uber in Amsterdam</strong>, he developed a GenAI-based bug-fixing approach that won an internal competition against 103 teams, with results presented directly to the Uber CEO.</p>
         </div>
-
+        <div class="about-interests">
+          <h3>Research Interests</h3>
+          <div class="interest-tags">
+            <span class="tag">Artificial Intelligence</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">Software Verification</span>
+            <span class="tag">Vibe Coding</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- End About Section -->
 
-  <!-- Projects Section -->
-  <section id="projects" >
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Selected <span>Peer-reviewed</span> Publications</h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info"> 
-            <a href="" target="_blank" style="color:white;text-decoration: none;"><h1>E-Test: E'er-Improving Test Suites</h1>
-            <h2>ICSE 2026</h2>
-            <p>E-Test leverages LLMs to pinpoint scenarios that the current test suite does not adequately cover, and augments the suite with test cases that execute these scenarios. Our evaluation on a dataset of 1,975 scenarios demonstrates that E-Test retrieves not-yet-tested execution scenarios significantly better than state-of-the-art approaches. While existing regression testing and field testing approaches for this task achieve a maximum F1-score of 0.34, and vanilla LLMs achieve a maximum F1-score of 0.39, E-Test reaches 0.54.</p></a>
-          </div></a>
-          <div class="project-img">
-            <a href="./papers/icse2026.pdf" target="_blank">
-            <img src="./img/papers/icse2026.png" alt="Do LLMs Generate Useful Concrete Test Oracles? An Empirical Study with an Unbiased Dataset"></a>
+  <!-- Career Timeline Section -->
+  <section id="timeline">
+    <div class="section-container">
+      <h2 class="section-title"><span>Career</span> Path</h2>
+      <div class="timeline-track">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="./img/Icon/polito.webp" alt="Politecnico di Torino">
           </div>
-        </div></a>
-        <div class="project-item">
-          <div class="project-info"> 
-            <a href="" target="_blank" style="color:white;text-decoration: none;"><h1>Do LLMs Generate Useful Concrete Test Oracles? An Empirical Study with an Unbiased Dataset</h1>
-            <h2>ASE 2025</h2>
-            <p>This paper presents an empirical study of the effectiveness of LLMs in generating test oracles. Our experiments use 13,866 test
-oracles, from 135 Java projects, that were created after the LLM training cut-off dates. Thus, our dataset is unbiased. </p></a>
-          </div></a>
-          <div class="project-img">
-            <a href="./papers/ase2025.pdf" target="_blank">
-            <img src="./img/papers/ase2025.png" alt="Do LLMs Generate Useful Concrete Test Oracles? An Empirical Study with an Unbiased Dataset"></a>
-          </div>
-        </div></a>
-        <div class="project-item">
-          <div class="project-info"> 
-            <a href="https://dl.acm.org/doi/full/10.1145/3709353" target="_blank" style="color:white;text-decoration: none;"><h1>From Today’s Code to Tomorrow’s Symphony: The AI
-Transformation of Developer’s Routine by 2030</h1>
-            <h2>ACM TOSEM 2025<br><span>News press articles from The Register and Swiss IT Magazine</span></h2>
-            <p>We envision HyperAssistant, an augmented AI tool that offers comprehensive support to 2030 developers, addressing current limitations in mental health support, fault detection, code optimization, team interaction, and skill development. </p></a>
-          </div></a>
-          <div class="project-img">
-            <a href="./papers/tosem2025.pdf" target="_blank">
-            <img src="./img/papers/tosem2025.png" alt="Finally, many developers seem to not regularly
-            check their code for statically detectable type errors, or if they do,
-            commit the code despite such errors."></a>
-          </div>
-        </div></a>
-        <div class="project-item">
-          <div class="project-info"> 
-            <a href="https://dl.acm.org/doi/10.1145/3597503.3639184" target="_blank" style="color:white;text-decoration: none;"><h1>PyTy: Repairing Static Type Errors in Python</h1>
-            <h2>ICSE 2024</h2>
-            <p>PyTy is a novel automated technique aimed at fixing type errors in Python. It was developed based on a study and employs a dataset named PyTyDefects, containing over 2,700 Python type errors fixes. The paper highlights the use of cross-lingual transfer learning to enhance PyTy's effectiveness, even with a small dataset. This involves adapting an existing program repair model for PyTy's use. PyTy proved highly effective, successfully resolving 85.4% of type errors in the evaluation. Additionally, its real-world applicability is shown by the high acceptance rate of GitHub pull requests using PyTy's fixes.</p></a>
-          </div></a>
-          <div class="project-img">
-            <a href="./papers/icse2024.pdf" target="_blank">
-            <img src="./img/papers/icse2024.png" alt="Finally, many developers seem to not regularly
-            check their code for statically detectable type errors, or if they do,
-            commit the code despite such errors."></a>
-          </div>
-        </div></a>
-
-        <div class="project-item">
-          <div class="project-info"> 
-        <h1>The Fault in Our Stars: Designing Reproducible Large-scale Code Analysis Experiments</h1>
-            <h2>ECOOP 2024</h2>
-            <p>Large-scale software repositories offer insights into software development but pose scaling challenges. This paper proposes a standardized methodology for sampling and studying repositories, emphasizing clear population definitions, reproducibility, and avoiding unreliable metrics like project popularity.</p></a>
-          </div>
-          <div class="project-img">
-            <a href="./papers/ecoop2024.pdf" target="_blank">
-            <img src="./img/papers/ecoop2024.png" alt="We advocate for a methodology that clearly lays out what the population
-            of interest is, how to sample it, and that fosters reproducibility."></a>
-          </div>
-        </div></a>
-
-        <div class="project-item">
-          <div class="project-info">
-            <a href="https://dl.acm.org/doi/10.1145/3565971" target="_blank" style="color:white;text-decoration: none;"><h1>Code Search: A Survey of Techniques for Finding Code</h1>
-            <h2>ACM Computing Surveys (CSUR), 2023</h2>
-            <p>This article provides a comprehensive overview of 30 years of research on code search. Given the
-              huge amounts of existing code, searching for specific code examples is a common activity during
-              software development. We discuss what
-              kinds of queries code search engines support, and give an overview of the main components used
-              to retrieve suitable code examples. In particular, the article discusses techniques to pre-process and
-              expand queries, approaches toward indexing and retrieving code, and ways of pruning and ranking
-              search results.</p></a>
-          </div>
-          <div class="project-img">
-            <a href="./papers/acmcsur2022.pdf" target="_blank">
-            <img src="./img/papers/survey.png" alt="the article discusses techniques to pre-process and
-            expand queries, approaches toward indexing and retrieving code, and ways of pruning and ranking
-            search results."></a>
-          </div>
-        </div>       
-        
-        <div class="project-item">
-          <div class="project-info"> 
-        <a href="https://dl.acm.org/doi/10.1145/3540250.3549114" target="_blank" style="color:white;text-decoration: none;"><h1>The Evolution of Type Annotations in Python:<br>An Empirical Study</h1>
-            <h2>ESEC/FSE 2022<br><span>ACM SIGSOFT Distinguished Paper Award</span></h2>
-            <p>We extract 1.4 million type annotation changes
-              from 9,655 Python repositories. Our results show that type annotations are clearly gaining traction, 
-              yet the large majority of code elements that
-              could be annotated currently remains unannotated. We see a huge
-              potential for techniques that automate the process of adding types
-              into an existing code base, such as neural type prediction models. Finally, many developers seem to not regularly
-              check their code for statically detectable type errors, or if they do,
-              commit the code despite such errors.</p></a>
-          </div>
-          <div class="project-img">
-            <a href="./papers/fse22.pdf" target="_blank">
-            <img src="./img/papers/fse22.png" alt="Finally, many developers seem to not regularly
-            check their code for statically detectable type errors, or if they do,
-            commit the code despite such errors."></a>
-          </div>
-        </div></a>
-
-        <div class="project-item">
-          <div class="project-info">
-            <a href="http://diffsearch.software-lab.org/diffsearch" target="_blank" style="color:white;text-decoration: none;"><h1>DiffSearch: A Scalable and Precise Search Engine for Code Changes</h1>
-            <h2>IEEE Transactions on Software Engineering (TSE), 2022<br><span>2<sup>nd</sup> prize winner at ICSE Student Research Competition 2022</span><br> and <span>Journal-first track at ASE 2023</span></h2>
-            <p>We present a scalable and precise search engine for code
-              changes. Given a query, the approach retrieves within seconds relevant examples from million code changes. Our query
-              language extends the underlying programming language, providing an intuitive
-              way of formulating queries to search for code changes. DiffSearch guarantees that every returned
-              search result fits the query.</p></a>
-          </div>
-          <div class="project-img">
-            <a href="./papers/ieeetse2022.pdf" target="_blank">
-            <img src="./img/papers/diffsearch.png" alt="We present a scalable and precise search engine for code
-            changes."></a>
+          <div class="timeline-content">
+            <span class="timeline-date">2013 &ndash; 2019</span>
+            <h3>B.Sc. &amp; M.Sc. in Computer Engineering</h3>
+            <p>Politecnico di Torino, Italy <img src="./img/Flags/italy.png" alt="Italy" class="flag-icon"></p>
           </div>
         </div>
-      
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="./img/Icon/unistuttgart.png" alt="University of Stuttgart">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">2019 &ndash; 2024</span>
+            <h3>Ph.D. in Computer Science <em>(summa cum laude)</em></h3>
+            <p>University of Stuttgart, Germany <img src="./img/Flags/germany.png" alt="Germany" class="flag-icon"></p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="./img/Icon/uber.png" alt="Uber">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023</span>
+            <h3>Research Intern &mdash; Generative AI</h3>
+            <p>Uber, Amsterdam, Netherlands <img src="./img/Flags/nl.png" alt="Netherlands" class="flag-icon"></p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="./img/Icon/usi.png" alt="USI Lugano">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 &ndash; 2025</span>
+            <h3>Postdoctoral Researcher</h3>
+            <p>USI Lugano, Switzerland <img src="./img/Flags/swiss.png" alt="Switzerland" class="flag-icon"></p>
+          </div>
+        </div>
+        <div class="timeline-item timeline-current">
+          <div class="timeline-icon">
+            <img src="./img/Icon/hsg3.png" alt="University of St. Gallen">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 &ndash; Present</span>
+            <h3>Great Minds Fellow</h3>
+            <p>University of St. Gallen, Switzerland <img src="./img/Flags/swiss.png" alt="Switzerland" class="flag-icon"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <!-- End Projects Section -->
+  <!-- End Career Timeline Section -->
+
+  <!-- Highlights Section -->
+  <section id="highlights">
+    <div class="section-container">
+      <h2 class="section-title"><span>Key</span> Achievements</h2>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-year">2025</div>
+          <h3>Great Minds Fellowship</h3>
+          <p>Awarded 189,747 CHF (~$230,000) by the University of St. Gallen as Principal Investigator for the project "Secure Software in the Age of Massively GenAI-Generated Code."</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-year">2023</div>
+          <h3>Uber GenAI Competition Winner</h3>
+          <p>Won the <a href="https://www.uber.com/en-DE/blog/the-transformative-power-of-generative-ai/?uclick_id=c4c5891a-42be-49cc-a9e1-7722ffb268b8" target="_blank">Uber global GenAI competition</a> among 103 teams, presenting the winning solution to the CEO and Executive Leadership Team.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-year">2022</div>
+          <h3>ACM Distinguished Paper Award</h3>
+          <p>Received the <a href="https://www.f05.uni-stuttgart.de/en/faculty/news/news/Software-Lab-earns-ACM-SIGSOFT-Distinguished-Paper-Awards/" target="_blank">ACM SIGSOFT Distinguished Paper Award</a> at ESEC/FSE 2022, one of the top venues in software engineering research.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Highlights Section -->
+
+  <!-- Publications Section -->
+  <section id="publications">
+    <div class="section-container">
+      <h2 class="section-title"><span>Selected</span> Publications</h2>
+      <div class="publications-grid">
+
+        <article class="pub-card">
+          <a href="./papers/icse2026.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/icse2026.png" alt="ICSE 2026 Paper">
+            <span class="pub-venue">ICSE 2026</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="./papers/icse2026.pdf" target="_blank">E-Test: E'er-Improving Test Suites</a></h3>
+            <p>E-Test leverages LLMs to identify untested execution scenarios and augments test suites accordingly, achieving an F1-score of 0.54 vs. 0.39 for vanilla LLMs.</p>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <a href="./papers/ase2025.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/ase2025.png" alt="ASE 2025 Paper">
+            <span class="pub-venue">ASE 2025</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="./papers/ase2025.pdf" target="_blank">Do LLMs Generate Useful Concrete Test Oracles?</a></h3>
+            <p>An empirical study using 13,866 unbiased test oracles from 135 Java projects to evaluate LLM effectiveness in generating test oracles.</p>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <a href="./papers/tosem2025.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/tosem2025.png" alt="TOSEM 2025 Paper">
+            <span class="pub-venue">TOSEM 2025</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="https://dl.acm.org/doi/full/10.1145/3709353" target="_blank">From Today's Code to Tomorrow's Symphony</a></h3>
+            <p>Envisioning HyperAssistant, an AI tool for 2030 developers. Featured in <em>The Register</em> and <em>Swiss IT Magazine</em>.</p>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <a href="./papers/icse2024.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/icse2024.png" alt="ICSE 2024 Paper">
+            <span class="pub-venue">ICSE 2024</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="https://dl.acm.org/doi/10.1145/3597503.3639184" target="_blank">PyTy: Repairing Static Type Errors in Python</a></h3>
+            <p>An automated technique that resolves 85.4% of Python type errors using cross-lingual transfer learning, with high acceptance on GitHub PRs.</p>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <a href="./papers/ecoop2024.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/ecoop2024.png" alt="ECOOP 2024 Paper">
+            <span class="pub-venue">ECOOP 2024</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="./papers/ecoop2024.pdf" target="_blank">The Fault in Our Stars: Reproducible Large-scale Code Analysis</a></h3>
+            <p>A standardized methodology for sampling and studying repositories, emphasizing reproducibility and avoiding unreliable metrics.</p>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <a href="./papers/acmcsur2022.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/survey.png" alt="ACM CSUR Paper">
+            <span class="pub-venue">ACM CSUR 2023</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="https://dl.acm.org/doi/10.1145/3565971" target="_blank">Code Search: A Survey of Techniques for Finding Code</a></h3>
+            <p>A comprehensive overview of 30 years of research on code search: query processing, indexing, retrieval, and ranking techniques.</p>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <a href="./papers/fse22.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/fse22.png" alt="ESEC/FSE 2022 Paper">
+            <span class="pub-venue-award">ESEC/FSE 2022 &middot; Distinguished Paper Award</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="https://dl.acm.org/doi/10.1145/3540250.3549114" target="_blank">The Evolution of Type Annotations in Python</a></h3>
+            <p>Analyzing 1.4M type annotation changes from 9,655 Python repositories. ACM SIGSOFT Distinguished Paper Award winner.</p>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <a href="./papers/ieeetse2022.pdf" target="_blank" class="pub-img">
+            <img src="./img/papers/diffsearch.png" alt="IEEE TSE Paper">
+            <span class="pub-venue">IEEE TSE 2022</span>
+          </a>
+          <div class="pub-info">
+            <h3><a href="http://diffsearch.software-lab.org/diffsearch" target="_blank">DiffSearch: A Scalable Search Engine for Code Changes</a></h3>
+            <p>A search engine retrieving relevant examples from millions of code changes within seconds. 2nd prize at ICSE SRC 2022.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Publications Section -->
+
+  <!-- News Section -->
+  <section id="news">
+    <div class="section-container">
+      <h2 class="section-title"><span>Latest</span> News</h2>
+      <div class="news-grid">
+        <div class="news-item">
+          <span class="news-date">Jan 2026</span>
+          <p>Invited to serve as junior editor for the prestigious <strong>IEEE Transactions on Software Engineering (TSE)</strong> journal.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Nov 2025</span>
+          <p><strong>ICSE 2026!</strong> Our paper "E-Test: E'er-Improving Test Suites" has been accepted at ICSE 2026 in Brazil.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Oct 2025</span>
+          <p>Presented our <a href="https://www.lucadigrazia.com/papers/ase2025.pdf" target="_blank">ASE 2025 paper</a> at University College London, invited by <a href="https://profiles.ucl.ac.uk/38657-federica-sarro" target="_blank">Prof. Federica Sarro</a>.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Oct 2025</span>
+          <p>Taught a course (1 ECTS) on <a href="https://www.digital-finance-msca.com/event-details-registration/explainable-ai-training-week" target="_blank">AI for Data Analysis</a> at Bern University of Applied Sciences.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Aug 2025</span>
+          <p>Starting a <strong>Great Minds Fellowship (~$230,000)</strong> at University of St. Gallen, hosted by Prof. Dr. Guido Salvaneschi.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Aug 2025</span>
+          <p><strong>ASE 2025!</strong> Paper on LLM-generated test oracles accepted at ASE 2025 in South Korea.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Jun 2025</span>
+          <p><a href="https://ketaiq.github.io/" target="_blank">Ketai Qiu</a> (PhD I co-supervise) won the ACM Student Research Competition at FSE 2025!</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Jul 2024</span>
+          <p>Our paper on <a href="https://arxiv.org/abs/2405.12731" target="_blank">"Devs in 2030"</a> featured in <a href="https://www.theregister.com/2024/05/28/software_development_2030/" target="_blank">The Register</a> and <a href="https://www.itmagazine.ch/artikel/82288/KI-Assistent_der_Zukunft_koennte_Programmier-Output_verdoppeln.html" target="_blank">Swiss IT Magazine</a>.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Apr 2024</span>
+          <p>Attended the <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/24172" target="_blank">Dagstuhl Seminar on Code Search</a>.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Feb 2024</span>
+          <p>Successfully <a href="./img/More/phdcertificate.png" target="_blank">defended my PhD</a> (summa cum laude) and joined USI advised by Prof. Mauro Pezz&egrave;.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Dec 2023</span>
+          <p><strong>ICSE 2024!</strong> "PyTy: Repairing Static Type Errors in Python" accepted at ICSE 2024 in Portugal.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Jun 2023</span>
+          <p>Won the <a href="https://www.uber.com/en-DE/blog/the-transformative-power-of-generative-ai/" target="_blank">Uber GenAI competition</a> among 103 teams worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End News Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-container">
+      <h2 class="section-title"><span>Get in</span> Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Address</h3>
+          <p>Torstrasse 25<br>9000 St. Gallen<br>Switzerland</p>
+        </div>
+        <div class="contact-card">
+          <h3>Institutional Email</h3>
+          <p><a href="mailto:luca.digrazia@unisg.ch">luca.digrazia@unisg.ch</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Private Email</h3>
+          <p><a href="mailto:work@lucadigrazia.com">work@lucadigrazia.com</a></p>
+        </div>
+      </div>
+      <div class="contact-social">
+        <a href="https://www.linkedin.com/in/luca-di-grazia/" target="_blank" aria-label="LinkedIn"><img src="./img/Icon/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/luca-digrazia" target="_blank" aria-label="GitHub"><img src="./img/Icon/github.png" alt="GitHub"></a>
+        <a href="https://scholar.google.com/citations?user=kT6l6S8AAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><img src="./img/Icon/scholar.png" alt="Google Scholar"></a>
+        <a href="https://orcid.org/0000-0002-5306-8645" target="_blank" aria-label="ORCID"><img src="./img/Icon/orcid.png" alt="ORCID"></a>
+        <a href="https://dblp.org/pid/318/0995.html" target="_blank" aria-label="DBLP"><img src="./img/Icon/dblp.png" alt="DBLP"></a>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <footer>
+    <p>References available on request. All opinions are personal. No data is collected by this website.</p>
+    <p><a href="imprint.md">Imprint</a> &middot; &copy;<script>document.write(new Date().getFullYear())</script> <a href="LICENSE.md">MIT License</a></p>
+  </footer>
 
   <script src="./app.js"></script>
-
-  <p style="text-align: center"><a href="imprint.md">Imprint</a> &copy;<script>document.write(new Date().getFullYear())</script> <a href="LICENSE.md">MIT License.</a></p>
 </body>
 
 </html>
