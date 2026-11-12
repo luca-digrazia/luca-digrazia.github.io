@@ -1071,4 +1071,7 @@ footer a:hover {
 	.contact-card:nth-child(3) { animation-delay: 0.3s; }
 }
 
-
+.research-image {
+  max-width: 40%;
+  height: auto;
+}
