@@ -343,6 +343,101 @@ img {
 	object-fit: contain;
 }
 
+/* --- QR codes --- */
+.hero-qr {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: auto auto;
+	column-gap: 14px;
+	max-width: 410px;
+	container-type: inline-size; /* lets the sentence size follow the block width (cqi units) */
+}
+
+/* Each card spans the two rows (sentence, code) so both codes line up */
+.qr-card {
+	grid-row: span 2;
+	display: grid;
+	grid-template-rows: auto 1fr; /* older browsers without subgrid */
+	grid-template-rows: subgrid;
+	padding: 10px;
+	border-radius: 16px;
+	background: rgba(15, 23, 42, 0.62);
+	border: 1px solid rgba(255,255,255,0.16);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 16px 36px rgba(0,0,0,0.28);
+	color: var(--color-white);
+	transition: all var(--transition);
+}
+
+.qr-card:hover {
+	color: var(--color-white);
+	border-color: var(--color-accent);
+	transform: translateY(-3px);
+	box-shadow: 0 20px 44px rgba(0,0,0,0.4);
+}
+
+/* The sentence above each code, in the accent orange.
+   Its size follows the card width so each sentence fits on two lines. */
+.qr-caption {
+	font-size: 1.3rem;
+	font-size: calc(3.9cqi - 2.3px);
+	font-weight: 600;
+	line-height: 1.35;
+	color: var(--color-accent);
+	text-wrap: balance;
+	margin: 2px 0 10px;
+}
+
+/* The clip trims the white edge some QR exports have around their frame */
+.qr-card img {
+	width: 100%;
+	align-self: end;
+	clip-path: inset(1.5px round 9px);
+}
+
+/* Desktop and landscape tablets: place the QR codes next to the portrait.
+   The hero photo is a 1920x1091 background (cover, top center), so on screen
+   it is max(100vw, 176vh) wide. Everything below is a fraction of that width,
+   which keeps the codes beside the face, above the shoulder, at any window size. */
+@media only screen and (min-width: 1024px) and (min-aspect-ratio: 4/3) {
+	#hero {
+		--photo-width: max(100vw, 176vh);
+		/* card width: grows with the photo, at least 190px, at most 224px,
+		   and never wider than the room between the face and the window edge */
+		--qr-card: min(224px, (50vw - 0.1 * var(--photo-width) - 30px) / 2, max(190px, 0.118 * var(--photo-width) + 28px));
+		--qr-block: calc(2 * var(--qr-card) + 14px);
+	}
+
+	/* lets .hero-qr position itself against the whole hero, not the text column */
+	.hero-content {
+		position: static;
+	}
+
+	.hero-qr {
+		position: absolute;
+		top: 0;
+		left: min(calc(50% + 0.1 * var(--photo-width)), calc(100% - var(--qr-block) - 16px));
+		width: var(--qr-block);
+		max-width: none;
+		height: calc(0.375 * var(--photo-width));
+		align-content: center;
+		pointer-events: none;
+	}
+
+	.qr-card {
+		pointer-events: auto;
+	}
+}
+
+/* Below 1200px the hero is never shorter than its own content (768px), even in
+   a short window, so there the photo is at least 768 x 1.76 = 1352px wide. */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) and (min-aspect-ratio: 4/3) {
+	#hero {
+		--photo-width: max(176vh, 1352px);
+	}
+}
+
 /* ============================================
    ABOUT SECTION
    ============================================ */
@@ -373,7 +468,12 @@ img {
 	line-height: 1.8;
 }
 
-.about-interests h3 {
+.about-career {
+	max-width: 520px;
+}
+
+.about-bio h3,
+.about-career h3 {
 	font-family: var(--font-heading);
 	font-size: 2.4rem;
 	color: var(--color-dark);
@@ -405,22 +505,25 @@ img {
 }
 
 /* ============================================
-   CAREER TIMELINE
+   CAREER PATH (vertical CV in the About section)
+   Each row: logo | date, role, place | flag
    ============================================ */
-#timeline {
-	background-color: var(--color-gray-100);
-}
-
 .timeline-track {
+	--logo-size: 88px;
+	--flag-width: 78px;
+	--flag-height: 50px;
 	position: relative;
-	padding-left: 40px;
+	list-style: none;
+	display: grid;
+	gap: 28px;
 }
 
+/* Line running behind the logos, from the first one down */
 .timeline-track::before {
 	content: '';
 	position: absolute;
-	left: 15px;
-	top: 0;
+	left: calc(var(--logo-size) / 2 - 1px);
+	top: calc(var(--logo-size) / 2);
 	bottom: 0;
 	width: 2px;
 	background: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
@@ -428,50 +531,55 @@ img {
 
 .timeline-item {
 	position: relative;
-	margin-bottom: 48px;
-	padding-left: 24px;
+	display: grid;
+	grid-template-columns: var(--logo-size) minmax(0, 1fr) var(--flag-width);
+	column-gap: 18px;
+	align-items: start;
 }
 
-.timeline-item:last-child {
-	margin-bottom: 0;
-}
-
-.timeline-item::before {
+/* Ends the line at the last logo */
+.timeline-item:last-child::after {
 	content: '';
 	position: absolute;
-	left: -33px;
-	top: 8px;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	background-color: var(--color-white);
-	border: 3px solid var(--color-primary);
-	z-index: 1;
-}
-
-.timeline-current::before {
-	background-color: var(--color-primary);
-	box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
+	left: 0;
+	top: var(--logo-size);
+	bottom: 0;
+	width: var(--logo-size);
+	background: var(--color-white);
 }
 
 .timeline-icon {
-	width: 56px;
-	height: 56px;
-	border-radius: 12px;
-	overflow: hidden;
-	margin-bottom: 12px;
+	position: relative;
+	z-index: 1;
+	width: var(--logo-size);
+	height: var(--logo-size);
+	padding: 9px;
+	border-radius: 16px;
 	background: var(--color-white);
 	border: 1px solid var(--color-gray-300);
+	box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 6px;
 }
 
 .timeline-icon img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+}
+
+.timeline-current .timeline-icon {
+	border-color: var(--color-primary);
+	box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.15);
+}
+
+/* Text is centred against the logo, and simply grows if it needs more lines */
+.timeline-content {
+	min-height: var(--logo-size);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .timeline-content .timeline-date {
@@ -482,32 +590,31 @@ img {
 	letter-spacing: 0.08em;
 }
 
-.timeline-content h3 {
-	font-size: 1.9rem;
+.timeline-content h4 {
+	font-size: 1.8rem;
 	font-weight: 600;
+	line-height: 1.35;
 	color: var(--color-dark);
-	margin: 4px 0;
+	margin: 2px 0 4px;
 }
 
-.timeline-content h3 em {
+.timeline-content h4 em {
 	font-weight: 400;
 	color: var(--color-gray-500);
 }
 
 .timeline-content p {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
+	line-height: 1.5;
 	color: var(--color-gray-500);
-	display: flex;
-	align-items: center;
-	gap: 6px;
 }
 
-.flag-icon {
-	width: 32px;
-	height: 22px;
+.timeline-flag {
+	width: var(--flag-width);
+	height: var(--flag-height);
 	object-fit: contain;
-	display: inline-block;
-	vertical-align: middle;
+	margin-top: calc((var(--logo-size) - var(--flag-height)) / 2);
+	filter: drop-shadow(0 3px 6px rgba(15, 23, 42, 0.2));
 }
 
 /* Color schemes for rankings */
@@ -855,6 +962,15 @@ footer a:hover {
 	animation: fadeInUp 0.8s ease 0.3s both;
 }
 
+/* "backwards" (not "both") so the hover lift still works once the cards are in */
+.qr-card {
+	animation: fadeInUp 0.8s ease 0.45s backwards;
+}
+
+.qr-card:nth-child(2) {
+	animation-delay: 0.55s;
+}
+
 /* ============================================
    RESPONSIVE — TABLET (768px+)
    ============================================ */
@@ -869,11 +985,6 @@ footer a:hover {
 
 	.hero-content {
 		padding: 160px 48px 100px;
-	}
-
-	.about-grid {
-		grid-template-columns: 2fr 1fr;
-		gap: 64px;
 	}
 
 	.highlights-grid {
@@ -894,6 +1005,17 @@ footer a:hover {
 
 	.news-item {
 		gap: 32px;
+	}
+}
+
+/* ============================================
+   RESPONSIVE — SMALL LAPTOP (1024px+)
+   ============================================ */
+@media only screen and (min-width: 1024px) {
+	/* Bio on the left, career path on the right */
+	.about-grid {
+		grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+		gap: 48px;
 	}
 }
 
@@ -936,42 +1058,9 @@ footer a:hover {
 		justify-content: center;
 	}
 
-	.timeline-track {
-		display: flex;
-		padding-left: 0;
-		gap: 0;
-		justify-content: space-between;
-	}
-
-	.timeline-track::before {
-		left: 0;
-		right: 0;
-		top: 36px;
-		bottom: auto;
-		width: 100%;
-		height: 2px;
-	}
-
-	.timeline-item {
-		flex: 1;
-		padding-left: 0;
-		margin-bottom: 0;
-		text-align: center;
-		padding-top: 60px;
-	}
-
-	.timeline-item::before {
-		left: 50%;
-		top: 30px;
-		transform: translateX(-50%);
-	}
-
-	.timeline-icon {
-		margin: 0 auto 12px;
-	}
-
-	.timeline-content p {
-		justify-content: center;
+	.about-grid {
+		grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+		gap: 64px;
 	}
 
 	.publications-grid {
@@ -1013,9 +1102,61 @@ footer a:hover {
 		font-size: 1.5rem;
 	}
 
+	/* QR codes: one card per row, code on the left, sentence on the right */
+	.hero-qr {
+		grid-template-columns: 1fr;
+		grid-template-rows: none;
+		row-gap: 12px;
+		max-width: none;
+	}
+
+	.qr-card {
+		grid-row: auto;
+		grid-template-columns: 88px minmax(0, 1fr);
+		grid-template-rows: auto;
+		column-gap: 16px;
+		align-items: center;
+		padding: 12px;
+	}
+
+	.qr-card img {
+		grid-column: 1;
+		grid-row: 1;
+		align-self: center;
+	}
+
+	.qr-caption {
+		grid-column: 2;
+		grid-row: 1;
+		font-size: 1.5rem;
+		font-size: clamp(1.3rem, calc((100cqi - 132px) / 12.8), 1.7rem);
+		margin: 0;
+	}
+
 	.section-title {
 		font-size: 3.2rem;
 		margin-bottom: 40px;
+	}
+
+	/* Career path: slightly smaller logos and flags so the text keeps its room */
+	.timeline-track {
+		--logo-size: 64px;
+		--flag-width: 54px;
+		--flag-height: 35px;
+		gap: 24px;
+	}
+
+	.timeline-item {
+		column-gap: 14px;
+	}
+
+	.timeline-icon {
+		padding: 8px;
+		border-radius: 14px;
+	}
+
+	.timeline-content h4 {
+		font-size: 1.6rem;
 	}
 
 	.highlight-card {
@@ -1069,9 +1210,4 @@ footer a:hover {
 	.contact-card:nth-child(1) { animation-delay: 0.1s; }
 	.contact-card:nth-child(2) { animation-delay: 0.2s; }
 	.contact-card:nth-child(3) { animation-delay: 0.3s; }
-}
-
-.research-image {
-  max-width: 40%;
-  height: auto;
 }
