@@ -777,6 +777,30 @@ img {
 	line-height: 1.35;
 }
 
+/* Conference logos that don't name the city: the city goes under the logo.
+   Set its colour with --city-color in the card's style attribute. */
+.pub-logo-city {
+	flex-direction: column;
+	gap: 10px;
+	padding: 18px 14px;
+}
+
+.pub-logo-city img {
+	height: auto;
+	max-height: 70%;
+	padding: 0;
+}
+
+.pub-city {
+	font-size: 1.3rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.35;
+	color: var(--city-color, var(--color-dark));
+}
+
 /* Venues without a logo file: name and year as text */
 .pub-logo-text {
 	background: var(--color-dark);
@@ -784,9 +808,9 @@ img {
 
 .pub-logo-name {
 	font-family: var(--font-heading);
-	font-size: 4rem;
+	font-size: 3rem;
 	font-weight: 700;
-	line-height: 1.05;
+	line-height: 1.1;
 	color: var(--color-white);
 	text-align: center;
 }
