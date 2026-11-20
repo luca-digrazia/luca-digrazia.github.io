@@ -344,21 +344,17 @@ img {
 }
 
 /* --- QR codes --- */
+/* The two cards are stacked, one under the other */
 .hero-qr {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	grid-template-rows: auto auto;
-	column-gap: 14px;
-	max-width: 410px;
-	container-type: inline-size; /* lets the sentence size follow the block width (cqi units) */
+	grid-template-columns: minmax(0, 1fr);
+	row-gap: 14px;
+	container-type: inline-size; /* lets the sentence size follow the card width (cqi units) */
 }
 
-/* Each card spans the two rows (sentence, code) so both codes line up */
 .qr-card {
-	grid-row: span 2;
 	display: grid;
-	grid-template-rows: auto 1fr; /* older browsers without subgrid */
-	grid-template-rows: subgrid;
+	grid-template-rows: auto auto;
 	padding: 10px;
 	border-radius: 16px;
 	background: rgba(15, 23, 42, 0.62);
@@ -381,7 +377,7 @@ img {
    Its size follows the card width so each sentence fits on two lines. */
 .qr-caption {
 	font-size: 1.3rem;
-	font-size: calc(3.9cqi - 2.3px);
+	font-size: max(11px, calc(7.8cqi - 1.75px));
 	font-weight: 600;
 	line-height: 1.35;
 	color: var(--color-accent);
@@ -396,17 +392,18 @@ img {
 	clip-path: inset(1.5px round 9px);
 }
 
-/* Desktop and landscape tablets: place the QR codes next to the portrait.
+/* Desktop and landscape tablets: the column of QR codes sits on the right of
+   the portrait, past the shoulder, vertically centred under the menu bar.
    The hero photo is a 1920x1091 background (cover, top center), so on screen
-   it is max(100vw, 176vh) wide. Everything below is a fraction of that width,
-   which keeps the codes beside the face, above the shoulder, at any window size. */
+   it is max(100vw, 176vh) wide; from 72% of its width outward it is free
+   background, i.e. from 22% of the photo width right of the page centre. */
 @media only screen and (min-width: 1024px) and (min-aspect-ratio: 4/3) {
 	#hero {
 		--photo-width: max(100vw, 176vh);
-		/* card width: grows with the photo, at least 190px, at most 224px,
-		   and never wider than the room between the face and the window edge */
-		--qr-card: min(224px, (50vw - 0.1 * var(--photo-width) - 30px) / 2, max(190px, 0.118 * var(--photo-width) + 28px));
-		--qr-block: calc(2 * var(--qr-card) + 14px);
+		--hero-height: 100vh;
+		/* card width: at most 210px, small enough that both cards fit in the
+		   hero's height and in the room between the shoulder and the window edge */
+		--qr-card: max(150px, min(210px, (var(--hero-height) - 250px) / 2.33, 50vw - 0.235 * var(--photo-width) - 24px));
 	}
 
 	/* lets .hero-qr position itself against the whole hero, not the text column */
@@ -417,10 +414,10 @@ img {
 	.hero-qr {
 		position: absolute;
 		top: 0;
-		left: min(calc(50% + 0.1 * var(--photo-width)), calc(100% - var(--qr-block) - 16px));
-		width: var(--qr-block);
-		max-width: none;
-		height: calc(0.375 * var(--photo-width));
+		left: min(calc(50% + 0.235 * var(--photo-width)), calc(100% - var(--qr-card) - 24px));
+		width: var(--qr-card);
+		height: var(--hero-height);
+		padding-top: 72px; /* menu bar */
 		align-content: center;
 		pointer-events: none;
 	}
@@ -435,6 +432,39 @@ img {
 @media only screen and (min-width: 1024px) and (max-width: 1199px) and (min-aspect-ratio: 4/3) {
 	#hero {
 		--photo-width: max(176vh, 1352px);
+		--hero-height: max(100vh, 768px);
+	}
+}
+
+/* Phones and tablets: the cards sit under the buttons, one per row,
+   code on the left and sentence on the right */
+@media not all and (min-width: 1024px) and (min-aspect-ratio: 4/3) {
+	/* QR codes: one card per row, code on the left, sentence on the right */
+	.hero-qr {
+		row-gap: 12px;
+		max-width: 440px;
+	}
+
+	.qr-card {
+		grid-template-columns: 88px minmax(0, 1fr);
+		grid-template-rows: auto;
+		column-gap: 16px;
+		align-items: center;
+		padding: 12px;
+	}
+
+	.qr-card img {
+		grid-column: 1;
+		grid-row: 1;
+		align-self: center;
+	}
+
+	.qr-caption {
+		grid-column: 2;
+		grid-row: 1;
+		font-size: 1.5rem;
+		font-size: clamp(1.3rem, calc((100cqi - 132px) / 12.8), 1.7rem);
+		margin: 0;
 	}
 }
 
@@ -1033,8 +1063,22 @@ img {
 /* ============================================
    CONTACT SECTION
    ============================================ */
+/* Dark like Key Achievements, and the same colour as the footer below,
+   so the two read as one block at the end of the page */
 #contact {
-	background-color: var(--color-white);
+	background-color: var(--color-dark);
+}
+
+#contact .section-container {
+	padding-bottom: 72px;
+}
+
+#contact .section-title {
+	color: var(--color-white);
+}
+
+#contact .section-title span {
+	color: var(--color-accent);
 }
 
 .contact-grid {
@@ -1047,32 +1091,37 @@ img {
 .contact-card {
 	text-align: center;
 	padding: 36px 24px;
-	background: var(--color-gray-100);
+	background: linear-gradient(135deg, var(--color-dark-soft) 0%, rgba(37, 99, 235, 0.08) 100%);
 	border-radius: 16px;
-	border: 1px solid var(--color-gray-300);
+	border: 1px solid rgba(255,255,255,0.08);
 	transition: all var(--transition);
 }
 
 .contact-card:hover {
-	border-color: var(--color-primary);
-	box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+	border-color: rgba(37, 99, 235, 0.4);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 .contact-card h3 {
 	font-family: var(--font-heading);
 	font-size: 1.8rem;
-	color: var(--color-dark);
+	color: var(--color-white);
 	margin-bottom: 8px;
 }
 
 .contact-card p {
 	font-size: 1.5rem;
-	color: var(--color-gray-500);
+	color: rgba(255,255,255,0.7);
 	line-height: 1.7;
 }
 
 .contact-card a {
 	font-weight: 500;
+	color: var(--color-primary-light);
+}
+
+.contact-card a:hover {
+	color: var(--color-accent);
 }
 
 .contact-social {
@@ -1085,8 +1134,8 @@ img {
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
-	background: var(--color-gray-100);
-	border: 1px solid var(--color-gray-300);
+	background: rgba(255,255,255,0.9);
+	border: 1px solid rgba(255,255,255,0.9);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1116,8 +1165,9 @@ img {
    ============================================ */
 footer {
 	text-align: center;
-	padding: 40px 24px;
+	padding: 32px 24px 40px;
 	background: var(--color-dark);
+	border-top: 1px solid rgba(255,255,255,0.08); /* thin line between contact and footer */
 }
 
 footer p {
@@ -1295,37 +1345,6 @@ footer a:hover {
 
 	.hero-description {
 		font-size: 1.5rem;
-	}
-
-	/* QR codes: one card per row, code on the left, sentence on the right */
-	.hero-qr {
-		grid-template-columns: 1fr;
-		grid-template-rows: none;
-		row-gap: 12px;
-		max-width: none;
-	}
-
-	.qr-card {
-		grid-row: auto;
-		grid-template-columns: 88px minmax(0, 1fr);
-		grid-template-rows: auto;
-		column-gap: 16px;
-		align-items: center;
-		padding: 12px;
-	}
-
-	.qr-card img {
-		grid-column: 1;
-		grid-row: 1;
-		align-self: center;
-	}
-
-	.qr-caption {
-		grid-column: 2;
-		grid-row: 1;
-		font-size: 1.5rem;
-		font-size: clamp(1.3rem, calc((100cqi - 132px) / 12.8), 1.7rem);
-		margin: 0;
 	}
 
 	.section-title {
