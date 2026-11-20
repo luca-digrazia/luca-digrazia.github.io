@@ -27,3 +27,31 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+// BibTeX popup for the publications: each card keeps its entry in a hidden <pre class="pub-bib">
+const bibDialog = document.getElementById('bib-dialog');
+if (bibDialog && typeof bibDialog.showModal === 'function') {
+	const bibText = bibDialog.querySelector('.bib-text');
+	const bibCopy = bibDialog.querySelector('.bib-copy');
+
+	document.querySelectorAll('.pub-bib-btn').forEach((button) => {
+		button.addEventListener('click', () => {
+			bibText.textContent = button.parentElement.querySelector('.pub-bib').textContent;
+			bibCopy.textContent = 'Copy';
+			bibDialog.showModal();
+		});
+	});
+
+	bibCopy.addEventListener('click', () => {
+		navigator.clipboard.writeText(bibText.textContent).then(
+			() => { bibCopy.textContent = 'Copied!'; },
+			() => { bibCopy.textContent = 'Select the text to copy'; }
+		);
+	});
+
+	bibDialog.querySelector('.bib-close').addEventListener('click', () => bibDialog.close());
+	// a click on the dark backdrop closes the popup
+	bibDialog.addEventListener('click', (event) => {
+		if (event.target === bibDialog) bibDialog.close();
+	});
+}
