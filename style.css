@@ -392,18 +392,18 @@ img {
 	clip-path: inset(1.5px round 9px);
 }
 
-/* Desktop and landscape tablets: the column of QR codes sits on the right of
-   the portrait, past the shoulder, vertically centred under the menu bar.
+/* Desktop and landscape tablets: the column of QR codes sits just right of the
+   face, mirroring the name on the left, vertically centred under the menu bar.
    The hero photo is a 1920x1091 background (cover, top center), so on screen
-   it is max(100vw, 176vh) wide; from 72% of its width outward it is free
-   background, i.e. from 22% of the photo width right of the page centre. */
+   it is max(100vw, 176vh) wide; the right ear is at 7.5% of that width right
+   of the page centre, so the column starts at 10%. */
 @media only screen and (min-width: 1024px) and (min-aspect-ratio: 4/3) {
 	#hero {
 		--photo-width: max(100vw, 176vh);
 		--hero-height: 100vh;
 		/* card width: at most 210px, small enough that both cards fit in the
-		   hero's height and in the room between the shoulder and the window edge */
-		--qr-card: max(150px, min(210px, (var(--hero-height) - 250px) / 2.33, 50vw - 0.235 * var(--photo-width) - 24px));
+		   hero's height and in the room between the face and the window edge */
+		--qr-card: max(150px, min(210px, (var(--hero-height) - 250px) / 2.33, 50vw - 0.1 * var(--photo-width) - 40px));
 	}
 
 	/* lets .hero-qr position itself against the whole hero, not the text column */
@@ -414,7 +414,7 @@ img {
 	.hero-qr {
 		position: absolute;
 		top: 0;
-		left: min(calc(50% + 0.235 * var(--photo-width)), calc(100% - var(--qr-card) - 24px));
+		left: min(calc(50% + 0.1 * var(--photo-width)), calc(100% - var(--qr-card) - 24px));
 		width: var(--qr-card);
 		height: var(--hero-height);
 		padding-top: 72px; /* menu bar */
