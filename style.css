@@ -741,6 +741,65 @@ img {
 	transform: scale(1.05);
 }
 
+/* Venue logo instead of the paper's first page.
+   Logos live in img/venues/; set the tile colour with style="--logo-bg: #...". */
+.pub-logo {
+	background: var(--logo-bg, var(--color-gray-100));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pub-logo img {
+	object-fit: contain;
+	padding: 18px;
+}
+
+.pub-card:hover .pub-logo img {
+	transform: scale(1.04);
+}
+
+/* The logo already shows venue and year, so the blue label is hidden ... */
+.pub-logo .pub-venue {
+	display: none;
+}
+
+/* ... except on publisher or series logos (ACM, IEEE, SIGSOFT, ASE), which don't */
+.pub-logo-generic img {
+	padding: 24px 22px 56px;
+}
+
+.pub-logo-generic .pub-venue {
+	display: block;
+	right: 12px;
+	text-align: center;
+	border-radius: 10px;
+	line-height: 1.35;
+}
+
+/* Venues without a logo file: name and year as text */
+.pub-logo-text {
+	background: var(--color-dark);
+}
+
+.pub-logo-name {
+	font-family: var(--font-heading);
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 1.05;
+	color: var(--color-white);
+	text-align: center;
+}
+
+.pub-logo-name small {
+	display: block;
+	font-family: var(--font-body);
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	color: var(--color-accent);
+}
+
 .pub-venue, .pub-venue-award {
 	position: absolute;
 	bottom: 12px;
