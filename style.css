@@ -801,6 +801,16 @@ img {
 	color: var(--city-color, var(--color-dark));
 }
 
+/* the dates under the city (or the issue on journals) */
+.pub-city small {
+	display: block;
+	font-size: 1.15rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: none;
+	opacity: 0.85;
+}
+
 /* Venues without a logo file: name and year as text */
 .pub-logo-text {
 	background: var(--color-dark);
