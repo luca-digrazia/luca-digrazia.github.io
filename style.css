@@ -882,7 +882,7 @@ img {
 	font-size: 1.4rem;
 	color: var(--color-gray-500);
 	line-height: 1.7;
-	/* every card has the same height, so long summaries are cut after 3 lines */
+	/* one-line subtitle; the clamp is only a safety net for very narrow cards */
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
