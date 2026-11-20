@@ -804,6 +804,7 @@ img {
 /* the dates under the city (or the issue on journals) */
 .pub-city small {
 	display: block;
+	margin-top: 4px;
 	font-size: 1.15rem;
 	font-weight: 600;
 	letter-spacing: 0.04em;
