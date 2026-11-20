@@ -4,5 +4,5 @@
   -l 1 \
   -singlefile \
   -r 150 \
-  "./papers/ecoop2024.pdf" \
-  "./img/papers/ecoop2024"
+  "./papers/tosem2026.pdf" \
+  "./img/papers/tosem2026"
