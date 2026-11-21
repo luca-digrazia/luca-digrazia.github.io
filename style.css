@@ -842,19 +842,6 @@ img {
 	opacity: 0.85;
 }
 
-/* Photo logos (ESEC/FSE 2022) fill the whole tile when it is tall (desktop);
-   on narrower screens, where the tile is wide, they fit inside it on navy */
-@media only screen and (min-width: 1200px) {
-	.pub-logo-cover {
-		padding: 0;
-	}
-
-	.pub-logo-cover img {
-		padding: 0;
-		object-fit: cover;
-	}
-}
-
 /* Venues without a logo file: name and year as text */
 .pub-logo-text {
 	background: var(--color-dark);
