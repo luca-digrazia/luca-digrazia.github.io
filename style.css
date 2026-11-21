@@ -842,20 +842,6 @@ img {
 	opacity: 0.85;
 }
 
-/* Logos that are photos (ESEC/FSE 2022): shown whole, with rounded corners */
-.pub-logo-photo {
-	padding: 14px 12px 50px;
-}
-
-.pub-logo-photo img {
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;
-	padding: 0;
-	border-radius: 8px;
-}
-
 /* Venues without a logo file: name and year as text */
 .pub-logo-text {
 	background: var(--color-dark);
