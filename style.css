@@ -385,11 +385,35 @@ img {
 	margin: 2px 0 10px;
 }
 
-/* The clip trims the white edge some QR exports have around their frame */
-.qr-card img {
-	width: 100%;
+/* The code sits in a black rounded frame with a label underneath,
+   in white Impact, the same size on both cards */
+.qr-code {
+	display: block;
 	align-self: end;
-	clip-path: inset(1.5px round 9px);
+	padding: 6px 6px 0;
+	border-radius: 12px;
+	background: #000;
+}
+
+.qr-code img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 7px;
+}
+
+.qr-label {
+	display: block;
+	padding: 3px 0 5px;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: 1.6rem;
+	font-size: max(12px, 8.4cqi);
+	font-weight: 400;
+	line-height: 1.35;
+	letter-spacing: 0.03em;
+	text-align: center;
+	white-space: nowrap;
+	color: #fff;
 }
 
 /* Desktop and landscape tablets: the column of QR codes sits just right of the
@@ -453,10 +477,22 @@ img {
 		padding: 12px;
 	}
 
-	.qr-card img {
+	.qr-code {
 		grid-column: 1;
 		grid-row: 1;
 		align-self: center;
+		padding: 4px 4px 0;
+		border-radius: 10px;
+	}
+
+	.qr-code img {
+		border-radius: 5px;
+	}
+
+	.qr-label {
+		padding: 2px 0 3px;
+		font-size: 1rem;
+		letter-spacing: 0;
 	}
 
 	.qr-caption {
