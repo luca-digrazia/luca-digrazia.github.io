@@ -386,7 +386,7 @@ img {
 }
 
 /* The code sits in a black rounded frame with a label underneath,
-   in white Impact, the same size on both cards */
+   in white, in the same font as the rest of the hero, same size on both cards */
 .qr-code {
 	display: block;
 	align-self: end;
@@ -405,12 +405,11 @@ img {
 .qr-label {
 	display: block;
 	padding: 3px 0 5px;
-	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-	font-size: 1.6rem;
-	font-size: max(12px, 8.4cqi);
-	font-weight: 400;
+	font-family: var(--font-body);
+	font-size: 1.4rem;
+	font-size: max(11px, 7cqi);
+	font-weight: 600;
 	line-height: 1.35;
-	letter-spacing: 0.03em;
 	text-align: center;
 	white-space: nowrap;
 	color: #fff;
@@ -491,8 +490,8 @@ img {
 
 	.qr-label {
 		padding: 2px 0 3px;
-		font-size: 1rem;
-		letter-spacing: 0;
+		font-size: 0.9rem;
+		letter-spacing: -0.01em;
 	}
 
 	.qr-caption {
